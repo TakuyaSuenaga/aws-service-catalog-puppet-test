@@ -9,7 +9,8 @@ accounts:
       - 'ap-northeast-1'
     tags:
       - 'purpose:dev'
-    overwrite: true
+    overwrite: # ← This should be a map, not a boolean
+      tags: [] # ← Add an empty list here
     append: # ← appendの後にコロンを付け、子要素として定義します
       tags: [] # ← 親アカウントから引き継ぎたいタグがある場合はここに記述します
     ou: []
