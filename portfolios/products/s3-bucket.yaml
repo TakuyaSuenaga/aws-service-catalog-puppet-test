@@ -1,18 +1,37 @@
-{
-  "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Amazon S3 Bucket",
-  "Resources": {
-    "S3Bucket": {
-      "Type": "AWS::S3::Bucket",
-      "Properties": {
-        "AccessControl": "Private"
-      }
-    }
-  },
-  "Outputs": {
-    "BucketName": {
-      "Description": "Name of the S3 bucket",
-      "Value": { "Ref": "S3Bucket" }
-    }
-  }
-}
+AWSTemplateFormatVersion: '2010-09-09'
+Description: A simple Amazon S3 Bucket Product.
+
+Parameters:
+  BucketName:
+    Type: String
+    Description: The globally unique name of the S3 bucket.
+  AccessControl:
+    Type: String
+    Default: Private
+    AllowedValues:
+      - Private
+      - PublicRead
+      - PublicReadWrite
+      - AuthenticatedRead
+    Description: Specifies a canned ACL to apply to the bucket.
+  TagKey:
+    Type: String
+    Description: The key for the tag to be applied to the S3 bucket.
+  TagValue:
+    Type: String
+    Description: The value for the tag to be applied to the S3 bucket.
+
+Resources:
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: !Ref BucketName
+      AccessControl: !Ref AccessControl
+      Tags:
+        - Key: !Ref TagKey
+          Value: !Ref TagValue
+
+Outputs:
+  BucketName:
+    Description: The name of the S3 bucket created.
+    Value: !Ref S3Bucket
