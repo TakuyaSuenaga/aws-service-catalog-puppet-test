@@ -10,7 +10,8 @@ accounts:
     tags:
       - 'purpose:dev'
     overwrite: true
-    append: false
+    append: # ← appendの後にコロンを付け、子要素として定義します
+      tags: [] # ← 親アカウントから引き継ぎたいタグがある場合はここに記述します
     ou: []
 extends:
   - 'manifest-spoke-with-all-accounts' # 全てのアカウントに適用されるテンプレート
