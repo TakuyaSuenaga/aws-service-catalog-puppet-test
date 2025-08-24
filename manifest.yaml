@@ -1,6 +1,6 @@
 schema: 'puppet-2019-04-01'
 accounts:
-  - account_id: '123456789012' # あなたのAWSアカウントIDに置き換えてください
+  - account_id: '897729135795' # あなたのAWSアカウントIDに置き換えてください
     name: 'dev'
     tags:
       - 'purpose:dev' # ← 修正点: タグをキー:値の文字列として記述します
