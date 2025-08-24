@@ -8,5 +8,5 @@ portfolios:
         support_email: 'security-team@example.com'
         source:
           s3:
-            bucket: 'my-source-code-bucket'
+            bucket: 'my-source-code-bucket-897729135795'
             key: 'templates/s3-bucket.template.json'
