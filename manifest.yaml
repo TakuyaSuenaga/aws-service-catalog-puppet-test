@@ -1,4 +1,9 @@
-schema: 'manifest'
+schema: 'puppet-2019-04-01'
+accounts:
+  - account_id: '897729135795' # あなたのAWSアカウントIDに置き換えてください
+    name: 'dev'
+    tags:
+      - tag: 'purpose:dev'
 extends:
   - 'manifest-spoke-with-all-accounts' # 全てのアカウントに適用されるテンプレート
 shares:
