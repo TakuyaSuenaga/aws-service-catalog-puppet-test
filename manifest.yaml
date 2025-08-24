@@ -4,7 +4,8 @@ accounts:
     name: 'dev'
     default_region: 'ap-northeast-1' # ← Add this line
     regions:
-      - 'us-east-1'
+      - 'ap-northeast-1'
+    regions_enabled: # ← この行を追加
       - 'ap-northeast-1'
     tags:
       - 'purpose:dev'
