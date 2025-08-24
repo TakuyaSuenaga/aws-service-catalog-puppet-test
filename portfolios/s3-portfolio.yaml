@@ -1,0 +1,12 @@
+schema: 'portfolios/product'
+portfolios:
+  - name: 'S3-Portfolio'
+    products:
+      - name: 'S3BucketProduct'
+        version: 'v1'
+        owner: 'security-team'
+        support_email: 'security-team@example.com'
+        source:
+          s3:
+            bucket: 'my-source-code-bucket'
+            key: 'templates/s3-bucket.template.json'

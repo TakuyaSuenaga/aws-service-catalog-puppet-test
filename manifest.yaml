@@ -1,0 +1,8 @@
+schema: 'manifest'
+extends:
+  - 'manifest-spoke-with-all-accounts' # 全てのアカウントに適用されるテンプレート
+shares:
+  portfolios:
+    - name: 'S3-Portfolio'
+      accounts:
+        - 'all'
